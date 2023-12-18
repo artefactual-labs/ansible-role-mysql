@@ -142,9 +142,9 @@ mysql_slow_query_time: 2
 Slow query log settings. Note that the log file will be created by this role, but if you're running on a server with SELinux or AppArmor, you may need to add this path to the allowed paths for MySQL, or disable the mysql profile. For example, on Debian/Ubuntu, you can run `sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/usr.sbin.mysqld && sudo service apparmor restart`.
 
 ```yaml
-mysql_key_buffer_size: "256M"
+mysql_key_buffer: "256M"
 mysql_max_allowed_packet: "64M"
-mysql_table_open_cache: "256"
+mysql_table_cache: "256"
 ...
 ```
 
